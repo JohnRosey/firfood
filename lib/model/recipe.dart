@@ -1,3 +1,5 @@
+import 'package:duration/duration.dart';
+
 enum RecipeType {
   plat,
   boisson,
@@ -23,4 +25,6 @@ class Recipe {
     required this.imageURL,
     required this.country,
   });
+
+  String get getDurationString => prettyDuration(this.duration);
 }
