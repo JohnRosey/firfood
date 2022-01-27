@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firfood/ui/screens/login.dart';
 
+import 'ui/screens/home.dart';
+
 class RecipesApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -9,7 +11,7 @@ class RecipesApp extends StatelessWidget {
       title: 'Recettes',
       initialRoute: '/login',
       routes: {
-        '/': (context) => Login(),
+        '/': (context) => HomeScreen(),
         'login': (context) => Login(),
       },
     );

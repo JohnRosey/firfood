@@ -3,14 +3,15 @@ import 'package:flutter/material.dart';
 class GoogleSignInButton extends StatelessWidget {
   GoogleSignInButton({Key? key, required this.onPressed}) : super(key: key);
 
-  final VoidCallback onPressed;
+  final Function onPressed;
+
   @override
   Widget build(BuildContext context) {
     Image _buildLogo() {
       return Image.asset(
-        "assets/g-logo.png",
-        height: 18.0,
-        width: 18.0,
+        'assets/g-logo.png',
+        height: 1.0,
+        width: 1.0,
       );
     }
 
@@ -29,8 +30,10 @@ class GoogleSignInButton extends StatelessWidget {
 
     return MaterialButton(
       height: 40.0,
-      onPressed: onPressed,
       color: Colors.white,
+      onPressed: () {
+        Navigator.of(context).pushReplacementNamed('/');
+      },
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[

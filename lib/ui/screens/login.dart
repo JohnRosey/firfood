@@ -16,17 +16,15 @@ class Login extends StatelessWidget {
       );
     }
 
-    Text _buildText() {
-      return Text(
-        'App name ',
-        style: TextStyle(
-          fontFamily: 'MerryWeather',
-          fontSize: 40.0,
-          color: const Color(0xFF00C6FF),
-        ),
-        textAlign: TextAlign.center,
-      );
-    }
+    Text _buildText() => Text(
+          'App name ',
+          style: const TextStyle(
+            fontFamily: 'MerryWeather',
+            fontSize: 40.0,
+            color: Color(0xFF00C6FF),
+          ),
+          textAlign: TextAlign.center,
+        );
 
     return Scaffold(
       // We do not use backgroundColor property anymore.
@@ -38,9 +36,10 @@ class Login extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               _buildText(),
-              SizedBox(height: 50.0),
+              const SizedBox(height: 50.0),
               GoogleSignInButton(
-                onPressed: () => print("Button pressed."),
+                onPressed: () =>
+                    Navigator.of(context).pushReplacementNamed('/'),
               ),
             ],
           ),
